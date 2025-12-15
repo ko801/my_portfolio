@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komal Yadav | Portfolio</title>
+    <style>
+        
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+}
+
+body {
+        background-color:  #1d1d1d;
+        color: #222;
+}
+       
+nav {
+        width: 100%;
+        background-color: #151414;
+        padding: 15px 50px;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        z-index: 10;
+        height: 80px;
+ }
+
+nav h2 {
+        color:darkgoldenrod;
+        font-size: 30px;
+        font-weight: 600;
+}
+
+nav ul {
+        display: flex;
+         gap: 25px;
+}
+
+nav ul li {
+        list-style: none;
+}
+
+nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        transition: 0.3s;
+}
+
+nav ul li a:hover {
+        color:darkgoldenrod;
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.home-text {
+         max-width: 50%;
+}
+
+.home-text h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        color: darkgoldenrod;
+}
+
+.home-text h3 {
+        font-size: 26px;
+         margin-bottom: 20px;
+         color: white;
+}
+
+.home-text p {
+         margin-bottom: 30px;
+        line-height: 1.6;
+        color: white;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    padding: 15px 0;
+    background:darkgoldenrod;
+    color: black;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+    height: 35px;
+    width: 100px;
+
+
+}
+.btn:hover{
+        box-shadow: 0 2px 10px darkgoldenrod;
+}
+
+.btn:hover {
+        background:darkgoldenrod;
+}
+
+.home-img img {
+        width: 300px;
+        height:300px;
+        border-radius: 50%;
+        object-fit: cover;
+       box-shadow: 0 2px 5px darkgoldenrod;
+        border: 3px solid darkgoldenrod;
+}
+
+.section-title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.skills-section {
+  padding: 100px 20px;
+  color: white;
+}
+
+.title {
+  color: darkgoldenrod;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+    align-items:center;
+    height: 40vh;
+    background-color: #151414;
+   max-width: 900px;
+   box-shadow:0 2px 5px darkgoldenrod;
+}
+
+.skill-card {
+   width: 600px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: #444;
+  box-shadow: 0 2px 5px darkgoldenrod;
+}
+
+.skill-card p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, darkgoldenrod);
+  border-radius: 10px;
+  transition: width 1.3s ease;
+}
+
+   
+#projects {
+    padding: 0 25px;
+    padding-top: 140px;
+}
+
+.projects-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+   
+}
+#projects h2{
+   color: darkgoldenrod;
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+
+}
+
+.project-card {
+  padding: 20px;
+    background-color:  black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px darkgoldenrod;
+    transition: 0.3s;
+    height: 400px;
+    width: 300px;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 2px 5px darkgoldenrod;
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.project-card h3 {
+    margin: 18px;
+    font-size: 15px;
+    color:darkgoldenrod;
+}
+
+.project-card p {
+    margin: 0 18px 18px;
+    line-height: 1.6;
+    color: white;
+    font-size: 12px;
+}
+
+.project-btns {
+    display: flex;
+   justify-content: space-evenly;
+    
+}
+.btn2{
+    font-size: 20px;
+    text-decoration: none;
+    height: 30px;
+    font-size: 12px;
+    gap: 10px;
+    padding: 10px;
+    width: 90px;
+    background-color:darkgoldenrod;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+   
+}
+
+.education-section {
+  padding: 150px 10%;
+  background-color: #1d1d1d;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 24px;
+  color: darkgoldenrod;
+  margin-bottom: 40px;
+}
+
+.education-card {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #151414;
+  padding: 30px 35px;
+  border-radius: 14px;
+  box-shadow: 0 1px 5px darkgoldenrod;
+  transition: 0.1s;
+}
+
+.education-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1px 5px darkgoldenrod;
+}
+
+.education-card h3 {
+  color: darkgoldenrod;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.edu-university {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.edu-location {
+  color: #ccc;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.edu-status {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 20px;
+  background-color: darkgoldenrod;
+  color: black;
+  font-weight: 600;
+}
+.para{
+  padding-top: 20px;
+  color:white;
+  font-size: 15px;
+}
+
+
+.compact-contact {
+  padding: 150px 15%;
+  background-color: #1d1d1d;
+  color: #fff;
+  text-align: center;
+}
+
+.compact-contact-title {
+  font-size: 24px;
+  color: darkgoldenrod;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.compact-contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.compact-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid darkgoldenrod;
+  transition: transform 0.1s, box-shadow 0.3s;
+}
+
+
+.compact-card h3 {
+  font-size: 15px;
+  color: darkgoldenrod;
+  margin-bottom: 6px;
+}
+
+.compact-card a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.compact-card a:hover {
+  color: darkgoldenrod;
+  text-decoration: underline;
+}
+
+.compact-contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.compact-contact-form input,
+.compact-contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color:black;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.compact-contact-form input:hover,
+.compact-contact-form textarea:hover {
+  box-shadow: 0 2px 5px darkgoldenrod;
+}
+
+.compact-contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+
+
+footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #151414 ;
+        color: #fff;
+        margin-top: 40px;
+}
+
+        
+@media (max-width: 992px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        z-index: 10;
+        padding: 15px 20px;
+
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding-top:60px;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+    .home-text {
+        max-width: 100%;
+    }
+
+    .home-img img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .skills-container{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+
+    .skill-card {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        justify-items: center;
+    }
+
+    .stat-box {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    nav h2 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    
+    .home-text h1 {
+        font-size: 36px;
+    }
+
+    #element {
+        font-size: 28px !important;
+    }
+    .home-img img {
+        width: 200px;
+        height: 200px;
+    }
+    .projects-container {
+        grid-template-rows: 1fr;
+        display: flex;
+        gap: 30px;
+        width:300%;
+
+    }
+
+    .project-card{
+        height:350px;
+        width:200px;
+        animation: scroll 5s linear infinite;
+    }
+    .contact-right input,
+    .contact-right textarea {
+        font-size: 14px;
+    }
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-300%);
+    }
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none;
+        flex-direction: row;
+        background-color: #151414;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+        justify-content: center;
+        position: absolute;
+        top: 60px;   
+        left: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    nav {
+        position: relative;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <h2> { } Komal</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Skill">Skill</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Edu">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">&#8942;</div> 
+
+    </nav>
+    <section id="home">
+        <div class="home-text">
+            <h1>Hi, I'm Komal</h1>
+              <span id="element" style="color: white;font-size: 45px";></span>
+            <p>i'm Frontend Web Developer skilled in building clean responsive and user-friendly interfaces.I focus on writing efficient code and creating smooth modern web experiences.</p>
+            <button class="btn"
+            onclick="downloadResume ()">View Resume</button>
+        </div>
+
+        <div class="home-img">
+            <img src="komal.jpg" alt="Profile Image">
+        </div>
+    </section>
+
+<section id="Skill" class="skills-section">
+  <h2 class="title">Skills</h2>
+
+  <div class="skills-container">
+    <div class="skill-card" data-skill="95">
+      <p>HTML</p>
+      <div class="bar"><span></span></div>
+    </div>
+
+    <div class="skill-card" data-skill="90">
+      <p>CSS</p>
+      <div class="bar"><span></span></div>
+    </div>
+
+    <div class="skill-card" data-skill="85">
+      <p>JavaScript</p>
+      <div class="bar"><span></span></div>
+    </div>
+
+    <div class="skill-card" data-skill="80">
+      <p>React</p>
+      <div class="bar"><span></span></div>
+    </div>
+
+    <div class="skill-card" data-skill="75">
+      <p>Java</p>
+      <div class="bar"><span></span></div>
+    </div>
+  </div>
+</section>
+
+    <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <img src="game.jpg" alt="Project 1">
+            <h3>Siman Says game</h3>
+            <p>Interactive memory game built using HTML, CSS, and JavaScript with
+               level-based progression and dynamic user input handling..</p>
+            <div class="project-btns">
+                <a class="btn2" href="https://boisterous-cucurucho-f28c8f.netlify.app/" >view Project</a>
+                <a class="btn2" href="https://github.com/ko801/siman-says-game.git" >view Code</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="medcare.jpg" alt="Project 2">
+            <h3>Medcare website</h3>
+            <p>Responsive medical consultation website built using HTML, CSS, and JavaScript, providing
+               disease information and basic online consultation features.</p>
+            <div class="project-btns">
+                <a class="btn2" href="https://medcare-plus-web.netlify.app/" >view Project</a>
+                <a class="btn2" href="https://github.com/ko801/medical-guidline-system.git" >view Code</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="e-comm.webp" alt="Project 3">
+            <h3> E-commerce</h3>
+            <p>Responsive shopping website built using HTML, CSS, and JavaScript with product listing,
+               user-friendly UI, and basic cart functionality.</p>
+            <div class="project-btns">
+                <a class="btn2" href="https://women-clothing-store.netlify.app/" >View Project</a>
+                <a class="btn2" href="https://github.com/ko801/e-commerce.git" >view Code</a>
+            </div>
+        </div>
+
+         <div class="project-card">
+            <img src="photo.jpg" alt="Project 3">
+            <h3>Camera access </h3>
+            <p>A clean and simple camera UI layout built using HTML,CSS designed to display a responsive
+               camera frame and buttons for capturing visuals.</p>
+            <div class="project-btns">
+                <a class="btn2" href="https://ko801.github.io/Camera-access/" >View Project</a>
+                <a class="btn2" href="https://github.com/ko801/Camera-access.git" >view Code</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="Edu" class="education-section">
+  <h2 class="education-title">Education</h2>
+
+  <div class="education-card">
+    <h3>Bachelor of Computer Applications (BCA)</h3>
+    <p class="edu-university">
+      Chhatrapati Shahu Ji Maharaj University (CSJMU)
+    </p>
+    <p class="edu-location">Kanpur, Uttar Pradesh</p>
+    <span class="edu-status">Currently Pursuing</span>
+
+    <p class="para">Hii I'm komal a frontend developer focused on building user-friendly
+       and visually appealing web Interface.i have a good command in HTML,CSS ,and JavaScript.
+       currently I,m learning React and backend development to expand My skills and move towards 
+       marn-stack developer. i love learning new technologies and improving my problem-solving 
+    skills through real projects
+  </p>
+  </div>
+  
+</section>
+
+    <section id="contact" class="compact-contact">
+  <h2 class="compact-contact-title">Contact </h2>
+
+  <div class="compact-contact-cards">
+    <div class="compact-card">
+      <h3>Email</h3>
+      <p><a href="mailto:komalyadav1.ingmail.com">komalyadav1.ingmail.com</a></p>
+    </div>
+
+    <div class="compact-card">
+      <h3>Phone</h3>
+      <p><a href="tel:9695796066">+91 96957 96066</a></p>
+    </div>
+
+    <div class="compact-card">
+      <h3>Location</h3>
+      <p>Kanpur, India</p>
+    </div>
+  </div>
+
+  <div class="compact-contact-form">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<hr>
+    <footer>
+        © 2025 Komal Yadav | All Rights Reserved
+    </footer>
+
+    <script>
+        function downloadResume() {
+            window.open("komal_resume.pdf", "_blank");
+        }
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>  
+      const skillCards = document.querySelectorAll(".skill-card");
+
+      function animateSkills() {
+      const triggerPoint = window.innerHeight - 100;
+      skillCards.forEach(card => {
+       const top = card.getBoundingClientRect().top;
+      if (top < triggerPoint) {
+      const bar = card.querySelector("span");
+      const percent = card.getAttribute("data-skill");
+      bar.style.width = percent + "%";
+      }
+     });
+     }
+      window.addEventListener("scroll", animateSkills);
+    </script>
+    <script>
+    var typed = new Typed('#element', {
+      strings: ['Web developer', 'Web developer'],
+      typeSpeed: 50,
+    });
+    const toggle = document.querySelector(".nav-toggle");
+    const menu = document.querySelector("nav ul");
+  
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>
